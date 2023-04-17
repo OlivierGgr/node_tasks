@@ -1,0 +1,55 @@
+@import "../../Utility/_variables.scss";
+
+.task-container {
+  margin-top: 5%;
+  width: 80%;
+  min-height: 15rem;
+  border: 2px solid gray;
+  height: 70vh;
+
+  .tasks-list {
+    padding-top: 3%;
+    margin: auto;
+    width: 50%;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    .task {
+      $border-color: $primary-color;
+      &.completed {
+        border-left: 0.5em solid $success-color;
+        text-decoration: line-through;
+      }
+      cursor: pointer;
+      border-left: 0.5em solid $primary-color;
+
+      padding-left: 2%;
+      margin-bottom: 2%;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      .task-name {
+        font-size: 1.25em;
+      }
+      .task-actions {
+        display: flex;
+        justify-content: space-between;
+        width: 20%;
+      }
+      &:hover {
+        transition-duration: 1s;
+        transition-property: border-left margin-left;
+        margin-left: -3.45em;
+        border-left: 4em solid $primary-color;
+        &.completed {
+          border-left: 4em solid $success-color;
+        }
+      }
+    }
+  }
+}
+
+.task-create-btn {
+  height: 2rem;
+  cursor: pointer;
+}

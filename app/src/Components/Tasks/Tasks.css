@@ -1,0 +1,75 @@
+.task-container {
+  margin-top: 5%;
+  width: 80%;
+  min-height: 15rem;
+  border: 2px solid gray;
+  height: 70vh;
+}
+
+.task-container .tasks-list {
+  padding-top: 3%;
+  margin: auto;
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.task-container .tasks-list .task {
+  cursor: pointer;
+  border-left: 0.5em solid #1890ff;
+  padding-left: 2%;
+  margin-bottom: 2%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.task-container .tasks-list .task.completed {
+  border-left: 0.5em solid #04d354;
+  text-decoration: line-through;
+}
+
+.task-container .tasks-list .task .task-name {
+  font-size: 1.25em;
+}
+
+.task-container .tasks-list .task .task-actions {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 20%;
+}
+
+.task-container .tasks-list .task:hover {
+  -webkit-transition-duration: 1s;
+          transition-duration: 1s;
+  -webkit-transition-property: border-left margin-left;
+  transition-property: border-left margin-left;
+  margin-left: -3.45em;
+  border-left: 4em solid #1890ff;
+}
+
+.task-container .tasks-list .task:hover.completed {
+  border-left: 4em solid #04d354;
+}
+
+.task-create-btn {
+  height: 2rem;
+  cursor: pointer;
+}
+/*# sourceMappingURL=Tasks.css.map */
